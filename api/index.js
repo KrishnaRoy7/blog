@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 const uploadMiddleware = multer({ storage: storage });
 const secret=process.env.SECRET;
 // process.env.MONGO_URL
-app.use(cors({credentials:true,origin:'kcrblogapplication.vercel.app'}))
+app.use(cors({credentials:true,origin:'https://kcrblogapplication.vercel.app'}))
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
